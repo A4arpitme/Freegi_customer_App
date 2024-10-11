@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pannable_rating_bar/flutter_pannable_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:freegi_app/controller/my_orders_controller.dart';
 import 'package:freegi_app/generated/assets.dart';
 import 'package:freegi_app/ui/my_orders/widgets/my_orders_items_widget.dart';
 import 'package:freegi_app/utils/colors.dart';
 import 'package:freegi_app/utils/text_styles.dart';
 import 'package:freegi_app/widgets/custom_app_bar.dart';
-import 'package:freegi_app/widgets/custom_app_button.dart';
 import 'package:get/get.dart';
 
 class MyOrdersPage extends GetView<MyOrdersController> {
@@ -17,7 +14,10 @@ class MyOrdersPage extends GetView<MyOrdersController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'My Orders'),
+      appBar: const CustomAppBar(
+        title: 'My Orders',
+        showBackButton: false,
+      ),
       body: Column(
         children: [
           Container(
@@ -57,7 +57,7 @@ class MyOrdersPage extends GetView<MyOrdersController> {
           ),
           Flexible(
             child: ListView.separated(
-              padding: const EdgeInsets.fromLTRB(15,15,15,25).r,
+              padding: const EdgeInsets.fromLTRB(15, 15, 15, 25).r,
               itemBuilder: (context, index) => const MyOrdersItemsWidget(),
               separatorBuilder: (context, index) => 10.verticalSpace,
               itemCount: 3,

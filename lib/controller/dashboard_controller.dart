@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:freegi_app/binding/chat_list_binding.dart';
 import 'package:freegi_app/binding/home_binding.dart';
 import 'package:freegi_app/binding/my_orders_binding.dart';
 import 'package:freegi_app/routes/app_routes.dart';
+import 'package:freegi_app/ui/chat/chat_list_screen.dart';
 import 'package:freegi_app/ui/home/home_page.dart';
 import 'package:freegi_app/ui/my_orders/my_orders_page.dart';
 import 'package:freegi_app/ui/profile/profile_page.dart';
@@ -15,7 +17,7 @@ class DashboardController extends GetxController {
   final pages = <String>[
     AppRoutes.home,
     AppRoutes.myOrders,
-    AppRoutes.chat,
+    AppRoutes.chats,
     AppRoutes.editProfile,
   ];
 
@@ -41,11 +43,11 @@ class DashboardController extends GetxController {
       );
     }
 
-    if (settings.name == AppRoutes.chat) {
+    if (settings.name == AppRoutes.chats) {
       return GetPageRoute(
         settings: settings,
-        page: () => const Scaffold(),
-        // binding: ChatBinding(),
+        page: () => const ChatListScreen(),
+        binding: ChatListBinding(),
       );
     }
 

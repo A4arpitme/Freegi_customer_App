@@ -23,8 +23,8 @@ class ChatPage extends GetView<ChatController> {
         children: [
           10.verticalSpace,
           Container(
-            padding: EdgeInsets.only(bottom: 10).r,
-            decoration: BoxDecoration(border: Border(bottom: BorderSide())),
+            padding: const EdgeInsets.only(bottom: 10).r,
+            decoration: const BoxDecoration(border: Border(bottom: BorderSide())),
             child: Row(
               children: [
                 Flexible(
@@ -111,8 +111,8 @@ class ChatPage extends GetView<ChatController> {
                         height: 30,
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
+                    const Padding(
+                      padding: EdgeInsets.all(10),
                       child: Icon(
                         Icons.more_vert,
                         size: 30,

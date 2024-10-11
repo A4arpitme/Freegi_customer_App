@@ -3,6 +3,7 @@ import 'package:freegi_app/binding/addresses_binding.dart';
 import 'package:freegi_app/binding/all_categories_binding.dart';
 import 'package:freegi_app/binding/cart_binding.dart';
 import 'package:freegi_app/binding/chat_binding.dart';
+import 'package:freegi_app/binding/chat_list_binding.dart';
 import 'package:freegi_app/binding/contact_shop_binding.dart';
 import 'package:freegi_app/binding/coupons_binding.dart';
 import 'package:freegi_app/binding/customer_service_binding.dart';
@@ -32,6 +33,7 @@ import 'package:freegi_app/ui/addresses/address_detail_page.dart';
 import 'package:freegi_app/ui/addresses/addresses_page.dart';
 import 'package:freegi_app/ui/all_categories/all_categories_page.dart';
 import 'package:freegi_app/ui/cart/cart_screen.dart';
+import 'package:freegi_app/ui/chat/chat_list_screen.dart';
 import 'package:freegi_app/ui/chat/chat_page.dart';
 import 'package:freegi_app/ui/coupons/coupons_page.dart';
 import 'package:freegi_app/ui/dashboard/dashboard_page.dart';
@@ -90,6 +92,7 @@ class AppRoutes {
   static const String profile = '/profile';
   static const String wallet = '/wallet';
   static const String topUpWallet = '/top-up-wallet';
+  static const String chats = '/chats';
   static const String chat = '/chat';
   static const String addresses = '/addresses';
   static const String addressDetail = '/address-detail';
@@ -242,6 +245,11 @@ class AppRoutes {
       name: topUpWallet,
       page: () => const WalletTopUpPage(),
       binding: TopUpBinding(),
+    ),
+    GetPage(
+      name: chats,
+      page: () => const ChatListScreen(),
+      binding: ChatListBinding(),
     ),
     GetPage(
       name: chat,

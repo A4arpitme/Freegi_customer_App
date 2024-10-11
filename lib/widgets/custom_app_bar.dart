@@ -12,9 +12,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     required this.title,
     this.actions,
     this.backgroundColor = AppColor.white,
+    this.showBackButton = true,
   });
 
   final String title;
+  final bool showBackButton;
   final Color backgroundColor;
   final List<Widget>? actions;
 
@@ -22,16 +24,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: backgroundColor,
-      leading: GestureDetector(
-        onTap: Get.back,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Image.asset(
-            Assets.imagesBack,
-            color: AppColor.black,
-          ),
-        ),
-      ),
+      automaticallyImplyLeading: false,
+      leading: !showBackButton
+          ? null
+          : GestureDetector(
+              onTap: Get.back,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Image.asset(
+                  Assets.imagesBack,
+                  color: AppColor.black,
+                ),
+              ),
+            ),
       title: Text(
         title,
         style: TextStyle(
