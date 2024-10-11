@@ -1,0 +1,13 @@
+{
+  "@@locale": "en",
+  "appName": "Freegi",
+  "@appName": {
+    "description": "Application Name"
+  },
+  "labelOverviewText1": "Pick the  Items you want and add them to your Shopping Cart.",
+  "labelOverviewHeader1": "Select your Items to Buy",
+  "labelOverviewHeader2": "Order item from your Shopping Bag",
+  "labelOverviewText2": "Complete your purchase by checking out and providing payment information for the items in your shopping bag.",
+  "labelOverviewHeader3": "Our System Delivery Item to you",
+  "labelOverviewText3": "Once your order is processed, our system will deliver the item(s) to you according to the selected delivery method."
+}
